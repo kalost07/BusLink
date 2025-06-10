@@ -1,13 +1,10 @@
 import java.util.ArrayList;
 
 class Route {
-    private int id;
-    private String name;
-    private String type;
+    private final int id;
+    private final String name;
+    private final String type;
     private ArrayList<Stop> stops = new ArrayList<>();
-
-    Route() {
-    }
 
     Route(int id, String name, String type, ArrayList<Stop> arr) {
         this.name = name;

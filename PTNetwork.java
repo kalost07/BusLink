@@ -2,10 +2,10 @@ import java.util.*;
 import java.io.*;
 
 public class PTNetwork {
-    private Map<Integer, Stop> stopMap = new HashMap<>();
-    private Map<Integer, Route> routeMap = new HashMap<>();
+    private final Map<Integer, Stop> stopMap = new HashMap<>();
+    private final Map<Integer, Route> routeMap = new HashMap<>();
 
-    private Map<Node, Set<Edge>> edges = new HashMap<>();
+    private final Map<Node, Set<Edge>> edges = new HashMap<>();
     static final int TRANSFER_PENALTY = 5;
     static final double DISTANCE_MULTIPLIER = 0.06;
     static final int MAX_WALKABLE_DISTANCE = 500;

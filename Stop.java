@@ -1,12 +1,12 @@
 import java.util.*;
 
 public class Stop {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
     private double lon;
     private double lat;
-    private Set<Route> routes = new HashSet<>();
-    private Node hubNode = new Node(this, null);
+    private final Set<Route> routes = new HashSet<>();
+    private final Node hubNode = new Node(this, null);
 
     Stop() {
         id = 0;

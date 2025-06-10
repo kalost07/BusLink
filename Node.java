@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public class Node{
-    private Stop stop;
-    private Route route;
+    private final Stop stop;
+    private final Route route;
     Node() {stop = null;route = null;}
     Node(Stop stop, Route route) {this.stop = stop; this.route = route;}
     @Override
