@@ -99,8 +99,6 @@ public class Main {
             }
         });
         frame.setVisible(true);
-        System.out.println("comboBox1 isDisplayable: " + dropDown1.isDisplayable());
-        System.out.println("comboBox2 isDisplayable: " + dropDown2.isDisplayable());
     }
 
     static void updateLabels(JLabel resultLabel, JLabel sumLabel, ArrayList<Node> path) {
