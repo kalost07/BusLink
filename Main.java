@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
@@ -39,7 +38,7 @@ public class Main {
                 currentActiveCombo[0] = dropDown2;
             }
         });
-        debounceTimer.addActionListener(e -> {
+        debounceTimer.addActionListener(_ -> {
             if (currentActiveCombo[0] != null && currentActiveCombo[0].getEditor().getEditorComponent().hasFocus()) {
                 JTextField editor = (JTextField) currentActiveCombo[0].getEditor().getEditorComponent();
                 String input = editor.getText().toUpperCase();
@@ -78,19 +77,17 @@ public class Main {
         frame.add(summaryLabel, BorderLayout.SOUTH);
 
         JButton findRouteButton = new JButton("Find Route");
-        findRouteButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                Stop stop1 = (Stop)dropDown1.getSelectedItem();
-                Stop stop2 = (Stop)dropDown2.getSelectedItem();
-                if (stop1 == null || stop2 == null) {return;}
-                ArrayList<Node> path = ptNetwork.simpleSearch(stop1, stop2);
-                // Debug purposes
-                for (Node node : path) {
-                    System.out.println(node);
-                }
-                updateLabels(resultLabel, summaryLabel, path);
-
+        findRouteButton.addActionListener(_ -> {
+            Stop stop1 = (Stop)dropDown1.getSelectedItem();
+            Stop stop2 = (Stop)dropDown2.getSelectedItem();
+            if (stop1 == null || stop2 == null) {return;}
+            ArrayList<Node> path = ptNetwork.simpleSearch(stop1, stop2);
+            // Debug purposes
+            for (Node node : path) {
+                System.out.println(node);
             }
+            updateLabels(resultLabel, summaryLabel, path);
+
         });
         northPanel.add(findRouteButton);
 
