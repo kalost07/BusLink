@@ -11,7 +11,7 @@ public class Stop {
     Stop() {
         id = 0;
         name = null;
-    };
+    }
     Stop(int id, String name, double lon, double lat) {
         this.id = id;
         this.name = name;

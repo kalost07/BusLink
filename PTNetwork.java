@@ -124,7 +124,7 @@ public class PTNetwork {
             double dist = visited.get(curr);
             for(Edge edge : edges.get(curr)) {
                 Node target = edge.getTarget();
-                double newDist = visited.get(curr) + edge.getWeight();
+                double newDist = dist + edge.getWeight();
                 if(!visited.containsKey(target) || visited.get(target) > newDist) {
                     visited.put(target, newDist);
                     queue.add(target);
