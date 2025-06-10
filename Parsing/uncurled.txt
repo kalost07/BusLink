@@ -1,0 +1,25 @@
+requests.post("https://www.sofiatraffic.bg/bg/trip/getSchedule",
+    data='${"line_id":168,"name":"7А","ext_id":"TB30","type":4,"color":"#2AA9E0","icon":"/images/transport_types/trolley.png","isWeekend":0}',
+    headers={
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Connection": "keep-alive",
+        "Content-Type": "application/json",
+        "Origin": "https://www.sofiatraffic.bg",
+        "Priority": "u=0",
+        "Referer": "https://www.sofiatraffic.bg/bg/public-transport",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "User-Agent": "Mozilla/5.0",
+        "X-Requested-With": "XMLHttpRequest",
+        "X-XSRF-TOKEN": "top-secret :)"
+    },
+    cookies={
+        "XSRF-TOKEN": "top-secret :)",
+        "cf_clearance": "top-secret :)",
+        "sofia_traffic_session": "top-secret :)"
+    },
+    auth=(),
+)
